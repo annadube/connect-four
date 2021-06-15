@@ -73,35 +73,35 @@ document.addEventListener('DOMContentLoaded', () => {
         [10, 17, 24, 31],
         [11, 18, 25, 32],
         [12, 19, 26, 33],
-        [13, 20, 27, 34], 
+        [13, 20, 27, 34],
     ]
 
-function checkBoard() {
-    for(let y=0; y < winningArrays.length; y++) {
-        const square1 = squares [winningArrays[y][0]]
-        const square2 = squares[winningArrays[y][1]]
-        const square3 = squares[winningArrays[y][2]]
-        const square4 = squares[winningArrays[y][3]]
+    function checkBoard() {
+        for (let y = 0; y < winningArrays.length; y++) {
+            const square1 = squares[winningArrays[y][0]]
+            const square2 = squares[winningArrays[y][1]]
+            const square3 = squares[winningArrays[y][2]]
+            const square4 = squares[winningArrays[y][3]]
 
-    //check those squares to see if they all have the same class of player-one
-    if(square1.classList.contains('player-one') &&
-    square2.classList.contains('player-one') &&
-    square3.classList.contains('player-one') &&
-    square4.classList.contains('player-one')
-    ){
-        result.innerHTML= 'Player One Wins!'
-    }
+            //check those squares to see if they all have the same class of player-one
+            if (square1.classList.contains('player-one') &&
+                square2.classList.contains('player-one') &&
+                square3.classList.contains('player-one') &&
+                square4.classList.contains('player-one')
+            ) {
+                result.innerHTML = 'Player One Wins!'
+            }
 
-    if(square1.classList.contains('player-two') &&
-    square2.classList.contains('player-two') &&
-    square3.classList.contains('player-two') &&
-    square4.classList.contains('player-two')
-    ){
-        result.innerHTML= 'Player Two Wins!'
-    }
-    }
+            if (square1.classList.contains('player-two') &&
+                square2.classList.contains('player-two') &&
+                square3.classList.contains('player-two') &&
+                square4.classList.contains('player-two')
+            ) {
+                result.innerHTML = 'Player Two Wins!'
+            }
+        }
 
-}
+    }
     for (let i = 0; i < squares.length; i++) {
         squares[i].onclick = () => {
             console.log('clicked' + i)
